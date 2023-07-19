@@ -271,3 +271,4 @@ class Authenticateuser {
 ```
 
 You can change it according to need. But after doing this you have to change middleware in routes from auth:api to whatever you name it. Also don't forget to define the middleware in Kernel.php
+
