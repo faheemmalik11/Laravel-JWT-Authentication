@@ -8,7 +8,7 @@ Complete tutorial for Laravel JWT Authentication
 * [Updating User model](#updating-user-model)
 * [Configure Auth guard](#configure-auth-guard)
 * [Adding authentication routes](#adding-authentication-routes)
-* [Creating the AuthController](#creating-auth-controller)
+* [Creating the Auth Controller](#creating-the-auth-controller)
 * [Middleware Optional](#middleware-optional)
 
 
@@ -196,7 +196,7 @@ class AuthController extends Controller
 }
 ```
 
-### Middleware(Optional)
+### Middleware Optional
 
 If you do not want default auth middleware. You can always make your own middleware to authenticate requests. like so:
 
