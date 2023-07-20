@@ -3,13 +3,13 @@ Complete tutorial for Laravel JWT Authentication
 
 ## Steps
 * [Installing jwt](#installing-jwt)
-* [Publishing the Config](#publishing-config)
+* [Publishing the Config](#publishing-the-config)
 * [Generate secret key](#generate-secret-key)
-* [Updating User model](#update-user-model)
+* [Updating User model](#updating-user-model)
 * [Configure Auth guard](#configure-auth-guard)
-* [Adding authentication routes](#add-authentication-routes)
-* [Creating the AuthController](#create-auth-controller)
-* [Middleware (Optional)](#middleware-(optional))
+* [Adding authentication routes](#adding-authentication-routes)
+* [Creating the AuthController](#creating-auth-controller)
+* [Middleware Optional](#middleware-optional)
 
 
 
