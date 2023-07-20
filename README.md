@@ -106,7 +106,7 @@ After this make the routes in the file auth.php:
 ```
 
 
-### Creating the AuthController
+### Creating the Auth Controller
 
 Now you have to make AuthController:
 ```sh
