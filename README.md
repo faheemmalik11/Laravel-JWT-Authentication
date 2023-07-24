@@ -2,14 +2,14 @@
 Complete tutorial for Laravel JWT Authentication
 
 ## Steps
-*[Installing jwt](#install_jwt)
-*[Publishing the Config](#publish_config)
-*[Generate secret key](#generate_secret_key)
-*[Updating User model](#update_user_model)
-*[Configure Auth guard](#configure_auth_guard)
-*[Adding authentication routes](#add_authentication_routes)
-*[Creating the AuthController](#create_auth_controller)
-*[Middleware(Optional)](#middleware)
+* [Installing jwt](#installing-jwt)
+* [Publishing the Config](#publishing-the-config)
+* [Generate secret key](#generate-secret-key)
+* [Updating User model](#updating-user-model)
+* [Configure Auth guard](#configure-auth-guard)
+* [Adding authentication routes](#adding-authentication-routes)
+* [Creating the Auth Controller](#creating-the-auth-controller)
+* [Middleware Optional](#middleware-optional)
 
 
 
@@ -106,7 +106,7 @@ After this make the routes in the file auth.php:
 ```
 
 
-### Creating the AuthController
+### Creating the Auth Controller
 
 Now you have to make AuthController:
 ```sh
@@ -196,7 +196,7 @@ class AuthController extends Controller
 }
 ```
 
-### Middleware(Optional)
+### Middleware Optional
 
 If you do not want default auth middleware. You can always make your own middleware to authenticate requests. like so:
 
@@ -271,3 +271,4 @@ class Authenticateuser {
 ```
 
 You can change it according to need. But after doing this you have to change middleware in routes from auth:api to whatever you name it. Also don't forget to define the middleware in Kernel.php
+
