@@ -210,6 +210,7 @@ namespace App\Http\Middleware;
 
 
 
+use Exception;
 use Illuminate\Http\Request;
 use Closure;
 
@@ -223,11 +224,7 @@ use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
 
 class Authenticateuser {
 
-    /**
-     * The JWT Authenticator.
-     *
-     * @var \Tymon\JWTAuth\JWTAuth
-     */
+ 
     protected $auth;
 
     public function __construct(JWTAuth $auth)
@@ -235,11 +232,7 @@ class Authenticateuser {
         $this->auth = $auth;
     }
 
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
-     */
+
     public function handle(Request $request, Closure $next)
     {
        
@@ -253,15 +246,15 @@ class Authenticateuser {
                 return response()->json(['message' => 'user not found', 'user' => $user], 500);
             }
 
-        } catch (JWTException $e) {
-            return response()->json(['messages' => $e->getMessage()], 500);
+        } catch (Exception $e) {
+            return response()->json(['message' => 'token cannot be parsed']);
         }
 
-        if(auth()->guard('user')->check()){
+        if(auth()->check()){
             return $next($request);
         } else {
             return response()->json([
-                'status' => auth()->guard('user')->check(),
+                'status' => auth()->check(),
                 'message' => 'Please login with user Account.',
             ], 409);
         }
