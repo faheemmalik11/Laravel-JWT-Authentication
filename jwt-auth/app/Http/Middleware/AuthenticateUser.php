@@ -43,8 +43,8 @@ class Authenticateuser {
                 return response()->json(['message' => 'user not found', 'user' => $user], 500);
             }
 
-        } catch (Exception $e) {
-            return response()->json(['message' => 'token cannot be parsed']);
+        } catch (JWTException $e) {
+            return response()->json(['message' => 'token cannot be parsed ' . $e->getMessage()]);
         }
 
         if(auth()->check()){

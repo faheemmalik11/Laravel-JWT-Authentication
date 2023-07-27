@@ -8,7 +8,7 @@ class AuthController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('authUser', ['except' => ['login']]); //auth middleware is applied to all the function except login. Check App\Http\Middleware\Authenticate.php for middleware
+        $this->middleware('authUser', ['except' => ['login','refresh']]); //auth middleware is applied to all the function except login. Check App\Http\Middleware\Authenticate.php for middleware
     }
 
     public function login()
